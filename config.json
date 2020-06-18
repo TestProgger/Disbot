@@ -1,0 +1,24 @@
+{
+    "token"  : "Your Token",
+    "prefix" : "!",
+    "filter" : [ ".*(х|x|h)(у|y|u)(и|й|i|e)?.*" , 
+                 ".*(п|p)(и|й|i|e)(з|z)(д|d).*" , 
+                 ".*(б|b)(л|l)(я|ya).*"  , 
+                 ".*(и|е|ё|e)(п|б|p|b).*", 
+                 ".*(п|p)(и|e|е|ё)(д|d)(о|o|а|а|и|е|ё|e|р).*",
+                 ".*(с|c|s)(о|o)(с|c|s)(и|i|e|е|ё|а|a|o|о).*"
+                ],
+    "admins" : [ 
+                { 
+                    "id" : "Admin ID" ,  
+                    "username" : "Admin Username",
+                    "discriminator" : "Admin Discriminator"
+                } 
+            ] ,
+    "preflog" : "log",
+    "code" : {
+                "MATTER" : "1",
+                "URL" : "2"
+    },
+    "interval_to_backup" : "0.01"
+}

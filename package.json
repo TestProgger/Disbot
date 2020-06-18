@@ -1,0 +1,23 @@
+{
+  "name": "discordbotv2",
+  "version": "0.0.1",
+  "description": "This is moderator bot",
+  "main": "index.js",
+  "dependencies": {
+    "discord.js": "^12.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TestProgger/Disbot.git"
+  },
+  "author": "TestProgger",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TestProgger/Disbot/issues"
+  },
+  "homepage": "https://github.com/TestProgger/Disbot#readme"
+}
