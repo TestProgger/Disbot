@@ -22,6 +22,12 @@ client.once("ready", () => {
   const time = new Date();
   logfile = ` ${preflog}_${time.getFullYear()}_${time.getMonth()}_${time.getDate()}.log`;
 
+  fs.access("backups", (error) => {
+    if (error) {
+      fs.mkdirSync("backups");
+    }
+  });
+  
   fs.access(logfile, (error) => {
     if (error) {
       fs.writeFile(logfile, "", (error) => {
