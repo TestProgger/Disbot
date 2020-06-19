@@ -97,12 +97,14 @@ client.on("message", async (message) => {
 });
 
 async function logger(message, code) {
+  const time = new Date();
   let obj = {
+    timestamp: `${time.getHours()}:${time.getMinutes()}`,
     user_code: code,
     user_id: message.author.id,
     user_name: message.author.username,
     user_discr: message.author.discriminator,
-    user_content: Buffer.from(message.content).toString("base64"),
+    user_content: Buffer.from(message.content).toString("base64")
   };
   fs.appendFileSync(logfile, `${JSON.stringify(obj)}\n`);
 }
