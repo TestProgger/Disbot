@@ -115,9 +115,9 @@ async function backup_log(logfile_old) {
   console.log(`Time To Backup : ${backup_time};  `);
   fs.stat(logfile_old, (error, stats) => {
     if (!error && stats.size) {
-      fs.createReadStream(logfile_old, time)
+      fs.createReadStream(logfile_old)
         .pipe(gzip)
-        .pipe(fs.createWriteStream(`${__dirname}/backups/backup_${backup_time}_${logfile}.gz`));
+        .pipe(fs.createWriteStream(`${__dirname}/backups/backup_${backup_time}_${logfile_old}.gz`));
       fs.unlinkSync(logfile_old);
 
       logfile = ` ${preflog}_${time.getFullYear()}_${time.getMonth()}_${time.getDate()}.log`;
